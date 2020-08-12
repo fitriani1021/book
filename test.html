@@ -1,0 +1,125 @@
+<script
+    src='https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js'>
+</script>
+<script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js'></script>
+<script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js">
+</script>
+
+<style>
+    .arjs-loader {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .arjs-loader div {
+        text-align: center;
+        font-size: 1.25em;
+        color: white;
+    }
+</style>
+
+
+<body style='margin : 0px; overflow: hidden;'>
+    <div class="arjs-loader">
+        <div>Loading, please wait...</div>
+    </div>
+    <a-scene vr-mode-ui='enabled: false;' renderer="logarithmicDepthBuffer: true;" embedded
+        arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
+
+        <a-nft type='nft' url='./book/markers/adigang' smooth='true' smoothCount='10' smoothTolerance='0.01'
+            smoothThreshold='5'>
+            <a-plane color="white" position="0 0 0" rotation="-90 0 0" height="200" width="150"
+                material="transparent: true; opacity: 0.9">
+                <a-text value="Agama Pelacur: Dramaturgi Transendental" anchor="center" align="center" color="red"
+                    position="0 0 200" scale="30 30 30"></a-text>
+                <a-text value="Writers: Prof. Dr. Nur Syam, M.Si" anchor="center" align="left" color="red"
+                    position="0 5 0.2" scale="30 30 30"></a-text>
+                <a-text value="Synopsis" color="red" anchor="center" align="left" position="0 20 0.2" scale="30 30 30">
+                </a-text>
+                <a-text value="Available: 5 copies" anchor="center" align="left" color="blue" position="0 20 -200"
+                    scale="30 30 30"></a-text>
+            </a-plane>
+        </a-nft>
+        <a-nft type='nft' url='./book/markers/agamapelacur' smooth='true' smoothCount='10' smoothTolerance='0.01'
+            smoothThreshold='5'>
+            <a-plane color="cyan" rotation="-90 0 0" scale="200 275 200" position="50 0 -200" material="transparent: true; opacity: 0.9">
+                <a-entity scale="0.19 0.19 0.19" material="transparent: false">
+                    <a-text value="Agama Pelacur: Dramaturgi Transendental" anchor="center" align="center" color="red"
+                        position="0 2 0.2" transparent: false></a-text>
+                    <a-text value="Writers: Prof. Dr. Nur Syam, M.Si" anchor="center" align="left" color="red"
+                        position="0 1.3 0.2"></a-text>
+                    <a-text value="Sinopsis: lalalallalalalallalalallalalalalalallalallalalalalalalalalalalla"
+                        color="red" anchor="center" align="left" position="0 0.75 0.2"></a-text>
+                    <a-text value="Available: 5 copies" anchor="center" align="left" color="blue" position="0 -1.5 0.2">
+                    </a-text>
+                </a-entity>
+            </a-plane>
+        </a-nft>
+        <!-- <a-nft type='nft' url='./book/markers/algoritma' smooth='true' smoothCount='10' smoothTolerance='0.01'
+            smoothThreshold='5'>
+            <a-entity gltf-model='./gltf/yow.gltf' scale="5 5 5" position="50 150 -100" rotation="-90 0 0">
+            </a-entity>
+        </a-nft>
+        <a-nft type='nft' url='./book/markers/americanpolitic' smooth='true' smoothCount='10' smoothTolerance='0.01'
+            smoothThreshold='5'>
+            <a-text value="The American Political System (Core Second Edition)" anchor="center" color="red"
+                position="100 0 -150" rotation="-90 0 0" material="align: center" scale="30 30 30"></a-text>
+            <a-text value="Writers: Ken Kollman" anchor="center" color="red" position="70 -5 -140" rotation="-90 0 0"
+                material="align: left" scale="30 30 30"></a-text>
+            <a-text value="Synopsis" color="red" anchor="center" position="70 -30 -120" rotation="-90 0 0"
+                material="align: center" scale="30 30 30"></a-text>
+            <a-text value="Available: 5 copies" anchor="center" color="blue" position="70 -30 -70" rotation="-90 0 0"
+                material="align: center" scale="30 30 30"></a-text>
+            <a-plane color="white" position="50 0 -100" rotation="-90 0 0" height="200" width="150"
+                material="transparent: true; opacity: 0.90"></a-plane>
+        </a-nft>
+        <a-nft type='nft' url='./book/markers/amgov' smooth='true' smoothCount='10' smoothTolerance='0.01'
+            smoothThreshold='5'>
+            <a-plane color="white" text__1="align: center; anchor: align; color: #ff0000; value: Book Cover"
+                rotation="-90 0 0" position="0 0.5 0" height="200" width="150"
+                material="transparent: true; opacity: 0.90"></a-plane>
+        </a-nft>
+        <a-nft type='nft' url='./book/markers/analisissurvival' smooth='true' smoothCount='10' smoothTolerance='0.01'
+            smoothThreshold='5'>
+            <a-circle color="blue" radius="1" rotation="0 0 0" position="0 1.5 -3" scale="30 30 30" rotation="-90 0 0">
+                <a-text position="0 0 0.2" value="Hiro" color="orange" align="center">
+                </a-text>
+                <a-box position="-1 -1 0" depth="0.3" height="0.3" width="0.3" rotation="0 0 0" material="color: orange;"
+                    animation="property: rotation; to: 360 360 360; loop: true; dur: 10000; easing: linear"></a-box>
+            </a-circle>
+        </a-nft>
+        <a-nft type='nft' url='./book/markers/ananda' smooth='true' smoothCount='10' smoothTolerance='0.01'
+            smoothThreshold='5'>
+            <a-plane color="white" text__1="align: center; anchor: align; color: #ff0000; value: Book Cover"
+                rotation="-90 0 0" position="0 0.5 0" height="200" width="150"
+                material="transparent: true; opacity: 0.90"></a-plane>
+        </a-nft>
+        <a-nft type='nft' url='./book/markers/antropologi' smooth='true' smoothCount='10' smoothTolerance='0.01'
+            smoothThreshold='5'>
+            <a-plane color="white" text__1="align: center; anchor: align; color: #ff0000; value: Book Cover"
+                rotation="-90 0 0" position="0 0.5 0" height="200" width="150"
+                material="transparent: true; opacity: 0.90"></a-plane>
+        </a-nft>
+        <a-nft type='nft' url='./book/markers/antropologibudaya' smooth='true' smoothCount='10' smoothTolerance='0.01'
+            smoothThreshold='5'>
+            <a-plane color="white" text__1="align: center; anchor: align; color: #ff0000; value: Book Cover"
+                rotation="-90 0 0" position="0 0.5 0" height="200" width="150"
+                material="transparent: true; opacity: 0.90"></a-plane>
+        </a-nft>
+        <a-nft type='nft' url='./book/markers/bali' smooth='true' smoothCount='10' smoothTolerance='0.01'
+            smoothThreshold='5'>
+            <a-plane color="white" text__1="align: center; anchor: align; color: #ff0000; value: Book Cover"
+                rotation="-90 0 0" position="0 0.5 0" height="200" width="150"
+                material="transparent: true; opacity: 0.90"></a-plane>
+        </a-nft> -->
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
